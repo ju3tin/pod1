@@ -5,7 +5,9 @@
   "main": "app.js",
   "licence": "Apache-2.0",
   "scripts": {
-    "start": "node app.js"
+    "start": "node app.js",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "dependencies": {
     "body-parser": "1.0.2",
@@ -19,7 +21,8 @@
     "request": "^2.79.0",
     "socket.io": "^1.7.2",
     "socket.io-client": "^1.7.3",
-    "x509": ""
+    "x509": "",
+    "snyk": "^1.189.0"
   },
   "repository": {
     "type": "git",
@@ -38,5 +41,6 @@
     "gulp-uglify": "^1.2.0",
     "gulp-util": "^3.0.6",
     "gulp-watch": "^4.3.4"
-  }
+  },
+  "snyk": true
 }
